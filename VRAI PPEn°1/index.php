@@ -1,27 +1,26 @@
 <?php
 session_start();
+require_once("modele/class.pdoLBC.inc.php");
 require_once("util/fonctions.inc.php");
-require_once("util/class.pdoJardiPlants.inc.php");
-include("vues/v_entete.php") ;
-include("vues/v_bandeau.php") ;
+include("vues/v_entete.php");
+include("vues/v_bandeau.php");
 
 if(!isset($_REQUEST['uc']))
      $uc = 'accueil';
 else
 	$uc = $_REQUEST['uc'];
 
-$pdo = PdoJardiPlants::getPdoJardiPlants();	 
+$pdo = PdoLBC::getPdoLBC();	 
 switch($uc)
 {
 	case 'accueil':
-		{include("vues/v_accueil.php");break;}
-	case 'voirProduits' :
-		{include("controleurs/c_voirProduits.php");break;}
-	case 'gererPanier' :
-		{ include("controleurs/c_gestionPanier.php");break; }
-	case 'supprimerUnProduit' :
-		{ include("controleurs/c_supprimerProduit.php");break; }
+		{include("controleurs/c_connexion.php"); break;}
+	case 'accueilVisiteur' :
+		{include("controleurs/c_visiteur.php"); break;}
+	case 'accueilResponsable' : 
+		{include("controleurs/c_responsable.php"); break;}
 }
-include("vues/v_pied.php") ;
+
+include("vues/v_pied.php");
 ?>
 
