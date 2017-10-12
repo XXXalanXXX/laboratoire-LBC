@@ -11,11 +11,11 @@ switch($uc)
 {
 	case 'accueilResponsable':
 		{include("controleurs/c_voirResponsable.php");break;}
-	case 'compteRendu' :
+	case 'CompteRendu' :
 		{include("controleurs/c_CompteRenduR.php");break;}
-	case 'voirSomme' :
+	case 'Somme' :
 		{include("controleurs/c_voirSomme.php");break;}
-	case 'voirActivites' :
+	case 'voirActivite' :
 		{include("controleurs/c_ActiviteR.php");break;}
 }
 ?>
