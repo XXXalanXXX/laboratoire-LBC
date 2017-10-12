@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("modele/class.pdoLBC.inc.php");
+require_once("modeles/class.pdoLBC.inc.php");
 require_once("util/fonctions.inc.php");
 include("vues/v_entete.php");
 include("vues/v_bandeau.php");
@@ -14,11 +14,11 @@ $pdo = PdoLBC::getPdoLBC();
 switch($uc)
 {
 	case 'accueil':
-		{include("controlleurs/c_connexion.php"); break;}
-	case 'accueilVisiteur' :
-		{include("controlleurs/c_visiteur.php"); break;}
-	case 'accueilResponsable' : 
-		{include("controlleurs/c_responsable.php"); break;}
+		{include("controlleurs/c_visiteurs.php"); break;}
+	case 'visiteursRegion' :
+		{include("controlleurs/c_visiteursRegion.php"); break;}
+	case 'compteRenduVisiteur' : 
+		{include("controlleurs/c_compteRenduVisiteur.php"); break;}
 }
 
 include("vues/v_pied.php");
