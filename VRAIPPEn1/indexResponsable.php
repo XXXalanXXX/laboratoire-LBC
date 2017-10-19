@@ -17,5 +17,9 @@ switch($uc)
 		{include("controleurs/c_voirSomme.php");break;}
 	case 'voirActivite' :
 		{include("controleurs/c_ActiviteR.php");break;}
+	case 'inscrireResponsable':
+		{include("controleurs/c_inscrireR.php");break;}
+		{include("controleurs/c_inscrireR.php");break;}
+
 }
 ?>
