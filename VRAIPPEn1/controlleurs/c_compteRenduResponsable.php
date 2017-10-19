@@ -1,5 +1,6 @@
+<!--Simon-->
 <?php
 
-	$lesClients = $pdo->getLesComptesRendu();
+	$lesClients = $pdo->getLesComptesRendus();
 	include("vues/v_CompteRenduR.php");	
 ?>

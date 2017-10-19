@@ -61,6 +61,12 @@ function connexion($login,$mdp){
 		}
 		
 	}
-
-
+//Simon//
+public function getLesComptesRendus() 
+{
+	$req="SELECT * FROM RAPPORTVISITE";
+	$res= PdoLBC::$monPdo->query($req);
+	$lignes =$res->fetchAll();
+	return $lignes;
+}
 ?>

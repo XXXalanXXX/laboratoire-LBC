@@ -1,3 +1,4 @@
+<!--Simon-->
 <?php
 require_once("modele/class.pdoLBc.inc.php");
 
@@ -19,7 +20,7 @@ switch($uc)
 		{include("controleurs/c_ActiviteR.php");break;}
 	case 'inscrireResponsable':
 		{include("controleurs/c_inscrireR.php");break;}
-		{include("controleurs/c_inscrireR.php");break;}
+
 
 }
 ?>
