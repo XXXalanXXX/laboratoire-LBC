@@ -19,6 +19,7 @@ switch($uc)
 		{include("controlleurs/c_visiteur.php"); break;}
 	case 'accueilResponsable' : 
 		{include("controlleurs/c_responsable.php"); break;}
+	
 }
 
 include("vues/v_pied.php");

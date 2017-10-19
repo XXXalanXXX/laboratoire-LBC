@@ -33,5 +33,5 @@ class pdoLBC
 		}
 		return pdoLBC::$monpdoLBC;  
 	}
-
+}
 ?>

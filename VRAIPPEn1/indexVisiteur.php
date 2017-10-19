@@ -19,6 +19,8 @@ switch($uc)
 		{include("controlleurs/c_visiteursRegion.php"); break;}
 	case 'compteRenduVisiteur' : 
 		{include("controlleurs/c_compteRenduVisiteur.php"); break;}
+	case 'activite' : 
+		{include("controlleurs/c_activites.php"); break;}
 }
 
 include("vues/v_pied.php");
