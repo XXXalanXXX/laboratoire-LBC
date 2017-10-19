@@ -2,18 +2,18 @@
 class pdoLBC	
 {   		
       	private static $serveur='mysql:host=localhost';
-      	private static $bdd='dbname=salle_communale';   		
+      	private static $bdd='dbname=LBC';   		
       	private static $user='root' ;    		
       	private static $mdp='' ;	
 		private static $monPdo;
-		private static $monPdoSalleCommunale = null;
+		private static $monpdoLBC = null;
 /**
  * Constructeur privé, crée l'instance de PDO qui sera sollicitée
  * pour toutes les méthodes de la classe
  */				
 	private function __construct()
 	{
-    		pdoLBC::$monPdo = new PDO(PdoSalleCommunale::$serveur.';'.PdoSalleCommunale::$bdd, pdoLBC::$user, pdoLBC::$mdp); 
+    		pdoLBC::$monPdo = new PDO(pdoLBC::$serveur.';'.PdoLBC::$bdd, pdoLBC::$user, pdoLBC::$mdp); 
 			pdoLBC::$monPdo->query("SET CHARACTER SET utf8");
 	}
 	public function _destruct(){

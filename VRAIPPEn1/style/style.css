@@ -1,0 +1,57 @@
+
+body{
+	background-color: #EEF2F3;
+	margin:0px;
+}
+#bandeau a:link{
+	text-decoration: none;
+}
+#bandeau{
+	padding-left: 30px;
+	background-color: #7E8C8D;
+}
+#bandeau a{
+	font-family: "Arial";
+	font-weight: 3px;
+	color: white;
+	font-size:30px;
+	float: right;
+	padding-right: 30px;
+	padding-top:30px; 
+}
+
+
+
+#connexion input{
+	width: 200px;
+	height: 80px;
+	background-color:#7E8C8D;
+	border-style: solid;
+	border-color: #7E8C8D;
+	color: white;
+	font-size: 20px;
+	
+}
+#connexion ::placeholder {
+  color: white;
+}
+#connexion input:nth-child(2){
+	margin-left: 420px;
+}
+#connexion input:focus{
+	border-color: #7E8C8D;	
+}
+#connexion input:active{
+	border-color: #7E8C8D;	
+}
+#connexion{
+	margin-left: 200px;
+	width: 100%;
+	margin-top: 100px;
+}
+#connexion #bouton{
+	margin-top: 100px;
+	width: 824px;
+	display: block;
+
+}
