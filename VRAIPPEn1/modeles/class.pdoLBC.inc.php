@@ -33,7 +33,7 @@ class pdoLBC
 		}
 		return pdoLBC::$monpdoLBC;  
 	}
-}
+
 
 
 function connexion($login,$mdp){
@@ -62,11 +62,13 @@ function connexion($login,$mdp){
 		
 	}
 //Simon//
-public function getLesComptesRendus() 
+function getLesComptesRendus() 
 {
 	$req="SELECT * FROM RAPPORTVISITE";
 	$res= PdoLBC::$monPdo->query($req);
 	$lignes =$res->fetchAll();
 	return $lignes;
+}
+
 }
 ?>
