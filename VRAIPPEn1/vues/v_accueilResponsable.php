@@ -1,3 +1,4 @@
+<!--Simon-->
 <div id="accueilResponsable">
 	<ul id="menu">
 	<li><a href="index.php?uc=accueil"> Accueil </a></li>

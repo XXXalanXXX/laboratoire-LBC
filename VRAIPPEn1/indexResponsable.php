@@ -11,16 +11,13 @@ $pdo = PdoLBc::getPdoLBc();
 switch($uc)
 {
 	case 'accueilResponsable':
-		{include("controleurs/c_voirResponsable.php");break;}
+		{include("controleurs/v_accueilResponsable.php");break;}
 	case 'CompteRendu' :
-		{include("controleurs/c_CompteRenduR.php");break;}
+		{include("controleurs/c_CompteRenduResponsable.php");break;}
 	case 'Somme' :
 		{include("controleurs/c_voirSomme.php");break;}
 	case 'voirActivite' :
-		{include("controleurs/c_ActiviteR.php");break;}
-	case 'inscrireResponsable':
-		{include("controleurs/c_inscrireR.php");break;}
-
+		{include("controleurs/c_activites.php");break;}
 
 }
 ?>

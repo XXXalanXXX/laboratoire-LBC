@@ -62,7 +62,12 @@ function connexion($login,$mdp){
 		
 	}
 //Simon//
+<<<<<<< HEAD
 function getLesComptesRendus() 
+=======
+
+ function getLesComptesRendus() 
+>>>>>>> 04d18ba4f900b5e08ef6740ff5e22dcf5bcefb73
 {
 	$req="SELECT * FROM RAPPORTVISITE";
 	$res= PdoLBC::$monPdo->query($req);
@@ -70,5 +75,12 @@ function getLesComptesRendus()
 	return $lignes;
 }
 
+<<<<<<< HEAD
+=======
+function ajouterCompteRendu($numvisite, $matriculevisiteur, $numpraticien, $codespe, $datevisite, $motifvisite, $bilanvisite)
+{
+	$req2 = "INSERT INTO RAPPORTVISITE(numvisite,matriculevisiteur,numpraticien,codespe, datevisite, motifvisite, bilanvisite) VALUES ('$numvisite', '$matriculevisiteur', '$numpraticien', '$codespe', '$datevisite', '$motifvisite', '$bilanvisite')";
+	PdoSalle::$monPdo->exec($req2);
+>>>>>>> 04d18ba4f900b5e08ef6740ff5e22dcf5bcefb73
 }
 ?>
