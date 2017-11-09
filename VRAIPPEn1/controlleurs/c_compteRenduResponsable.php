@@ -2,5 +2,5 @@
 <?php
 
 	$lesClients = $pdo->getLesComptesRendus();
-	include("vues/v_CompteRenduR.php");	
+	include("vues/v_compteRenduResponsable.php");	
 ?>

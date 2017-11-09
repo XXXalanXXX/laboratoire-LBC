@@ -1,6 +1,6 @@
 <!--Simon-->
 <?php
-require_once("modele/class.pdoLBc.inc.php");
+require_once("modeles/class.pdoLBc.inc.php");
 
 if(!isset($_REQUEST['uc']))
      $uc = 'accueilResponsable';
