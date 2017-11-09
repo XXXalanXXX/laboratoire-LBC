@@ -1,10 +1,10 @@
 <?php
 class pdoLBC	
 {   		
-      	private static $serveur='mysql:host=http://gr02.sio-cholet.fr/phpmyadmin';
-      	private static $bdd='dbname=LBC';   		
-      	private static $user='dbo672809078' ;    		
-      	private static $mdp='BMw1234*' ;	
+      	private static $serveur='mysql:host=localhost';
+      	private static $bdd='dbname=db672809078';   		
+      	private static $user='root' ;    		
+      	private static $mdp='' ;	
 		private static $monPdo;
 		private static $monpdoLBC = null;
 /**
@@ -13,7 +13,7 @@ class pdoLBC
  */				
 	private function __construct()
 	{
-    		pdoLBC::$monPdo = new PDO(pdoLBC::$serveur.';'.PdoLBC::$bdd, pdoLBC::$user, pdoLBC::$mdp); 
+    		pdoLBC::$monPdo = new PDO(pdoLBC::$serveur.';'.pdoLBC::$bdd, pdoLBC::$user, pdoLBC::$mdp); 
 			pdoLBC::$monPdo->query("SET CHARACTER SET utf8");
 	}
 	public function _destruct(){
@@ -45,13 +45,11 @@ function connexion($login,$mdp){
 		$requete = PdoLBC::$monPdo->query($req);
 		$responsables = $requete->fetchAll();
 
-
-		//
 		foreach ($lignes as $ligne ) {
-			if($login==$ligne['LOGIN']&&$mdp==$ligne['MDP']){
-				foreach ($responasbles as $responsable) {
-					if($ligne['id']==$responsable['id'])header('location:indexResponsable.php?uc=accueilResponsable&userid='.$ligne['ID'].'&recherche=aucune');
-					else header('location:index.php?uc=accueilVisiteur&&userid='.$ligne['ID']);
+			if($login==$ligne['LOGINVISITEUR']&&$mdp==$ligne['MDPVISITEUR']){
+				foreach ($responsables as $responsable) {
+					if($ligne['MATRICULEVISITEUR']==$responsable['MATRICULEVISITEUR'])header('location:indexResponsable.php?uc=accueilResponsable&userid='.$ligne['MATRICULEVISITEUR'].'&recherche=aucune');
+					else header('location:indexVisiteur.php?uc=accueilVisiteur&&userid='.$ligne['MATRICULEVISITEUR']);
 				}
 				
 			}
@@ -62,12 +60,7 @@ function connexion($login,$mdp){
 		
 	}
 //Simon//
-<<<<<<< HEAD
-function getLesComptesRendus() 
-=======
-
  function getLesComptesRendus() 
->>>>>>> 04d18ba4f900b5e08ef6740ff5e22dcf5bcefb73
 {
 	$req="SELECT * FROM RAPPORTVISITE";
 	$res= PdoLBC::$monPdo->query($req);
@@ -75,12 +68,11 @@ function getLesComptesRendus()
 	return $lignes;
 }
 
-<<<<<<< HEAD
-=======
+
 function ajouterCompteRendu($numvisite, $matriculevisiteur, $numpraticien, $codespe, $datevisite, $motifvisite, $bilanvisite)
 {
 	$req2 = "INSERT INTO RAPPORTVISITE(numvisite,matriculevisiteur,numpraticien,codespe, datevisite, motifvisite, bilanvisite) VALUES ('$numvisite', '$matriculevisiteur', '$numpraticien', '$codespe', '$datevisite', '$motifvisite', '$bilanvisite')";
 	PdoSalle::$monPdo->exec($req2);
->>>>>>> 04d18ba4f900b5e08ef6740ff5e22dcf5bcefb73
+}
 }
 ?>
