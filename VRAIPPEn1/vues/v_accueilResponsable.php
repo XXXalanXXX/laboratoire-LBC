@@ -1,9 +1,8 @@
 <!--Simon-->
 <div id="accueilResponsable">
 	<ul id="menu">
-	<li><a href="index.php?uc=accueil"> Accueil </a></li>
-	<li><a href="index.php?uc=CompteRendu"> Voir les comptes rendus </a></li>
-	<li><a href="index.php?uc=Somme"> Voir la somme globale </a></li>
-	<li><a href="index.php?uc=voirActivite"> Voir les demandes d'activités </a></li>
+	<li><a href="indexResponsable.php?uc=accueilResponsable"><input id="bouton" type="submit" name="button" value="Accueil"> </a></li>
+	<li><a href="indexResponsable.php?uc=CompteRendu"><input id="bouton" type="submit" name="button" value="Les comptes rendus"></a></li>
+	<li><a href="indexResponsable.php?uc=voirActivite"><input id="bouton" type="submit" name="button" value="Les activités"> </a></li>
 </ul>
 </div>

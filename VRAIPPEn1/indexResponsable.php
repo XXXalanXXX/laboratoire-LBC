@@ -1,6 +1,8 @@
 <!--Simon-->
 <?php
-require_once("modele/class.pdoLBc.inc.php");
+require_once("modeles/class.pdoLBc.inc.php");
+include("vues/v_entete.php");
+include("vues/v_bandeau_index.php");
 
 if(!isset($_REQUEST['uc']))
      $uc = 'accueilResponsable';
@@ -11,13 +13,11 @@ $pdo = PdoLBc::getPdoLBc();
 switch($uc)
 {
 	case 'accueilResponsable':
-		{include("controleurs/v_accueilResponsable.php");break;}
+		{include("vues/v_accueilResponsable.php");break;}
 	case 'CompteRendu' :
-		{include("controleurs/c_CompteRenduResponsable.php");break;}
-	case 'Somme' :
-		{include("controleurs/c_voirSomme.php");break;}
+		{include("controlleurs/c_compteRenduResponsable.php");break;}
 	case 'voirActivite' :
-		{include("controleurs/c_activites.php");break;}
+		{include("controlleurs/c_activites.php");break;}
 
 }
 ?>

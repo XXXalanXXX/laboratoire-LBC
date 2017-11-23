@@ -62,7 +62,7 @@ function connexion($login,$mdp){
 //Simon//
  function getLesComptesRendus() 
 {
-	$req="SELECT * FROM RAPPORTVISITE";
+	$req="SELECT numvisite, RAPPORTVISITE.matriculevisiteur, datevisite, motifvisite,bilanvisite, nompraticien, libellespe FROM RAPPORTVISITE, PRATICIEN, SPECIALITE WHERE RAPPORTVISITE.numpraticien=PRATICIEN.numpraticien AND RAPPORTVISITE.codespe= SPECIALITE.codespe";
 	$res= PdoLBC::$monPdo->query($req);
 	$lignes =$res->fetchAll();
 	return $lignes;
