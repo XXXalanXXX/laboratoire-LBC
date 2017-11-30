@@ -19,7 +19,7 @@ switch($uc)
 	case 'accueilVisiteur' :
 		{include("controlleurs/c_visiteur.php"); break;}
 	case 'accueilResponsable' : 
-		{include("controlleurs/c_indexResponsable.php"); break;}
+		{include("controlleurs/c_responsable.php"); break;}
 	case 'connexion':
 		{include("controlleurs/c_connexion.php"); break;}
 }

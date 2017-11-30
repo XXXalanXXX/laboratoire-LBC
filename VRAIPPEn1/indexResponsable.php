@@ -18,6 +18,8 @@ switch($uc)
 		{include("controlleurs/c_compteRenduResponsable.php");break;}
 	case 'voirActivite' :
 		{include("controlleurs/c_activites.php");break;}
+	case 'deconnexion':
+		{include("controlleurs/c_deconnexion.php");break;}
 
 }
 ?>
